@@ -8,7 +8,7 @@ process cell_ranger {
 
     publishDir "${launchDir}/analysis/cellranger", mode: "copy"
 
-    module "cellranger/8.0.0"
+    module "cellranger/9.0.1"
 
     input:
     val(sub_name)

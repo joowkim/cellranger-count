@@ -10,10 +10,12 @@
 #SBATCH -o slurm.%A.o
 #SBATCH -e slurm.%A.e
 
-module load nextflow/22.04.3
+module load nextflow/23.10.0
 module load singularity/3.8.0
+module load java/21.0.6
 
 nextflow run cellranger.nf -c ./cellranger_conf/run.config -resume -profile slurm
 
-module unload nextflow/22.04.3
+module unload nextflow/23.10.0
 module unload singularity/3.8.0
+module unload java/21.0.6
